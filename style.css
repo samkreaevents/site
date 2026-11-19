@@ -620,6 +620,26 @@ h3 {
   font-style: normal;
 }
 
+.footer-contact-list {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-contact-list a {
+  color: #5a5650;
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+
+.footer-contact-list a:hover {
+  color: #80623a;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .footer-social-list {
   display: flex;
   align-items: center;
