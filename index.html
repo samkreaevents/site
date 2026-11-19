@@ -127,12 +127,6 @@
             <p>We develop a visual direction and concept that gives the event a clear look and feel.</p>
           </li>
         </ul>
-        <a
-          class="button button-outline"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeMP45VwhOKYX9JKzLkAuiHadeb1AIqtmk7PB8A-fWx7YCe6Q/viewform?usp=header"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Ask about our services → </a>
       </section>
 
       <section class="portfolio" id="portfolio">
@@ -206,12 +200,51 @@
         </ol>
       </section>
 
-      <section class="testimonials" id="testimonials">
+      <section
+        class="testimonials"
+        id="testimonials"
+        aria-labelledby="testimonials-heading"
+        aria-roledescription="carousel"
+      >
         <div class="testimonial-inner">
           <p class="eyebrow">CLIENT FEEDBACK</p>
-          <h2>What clients say.</h2>
-          <!-- Add an approved client testimonial here before publishing a quote. -->
-          <p class="testimonial-placeholder">Client feedback will be added with permission.</p>
+          <h2 id="testimonials-heading">What clients say.</h2>
+          <div class="testimonial-track" role="group" aria-label="Client testimonials" tabindex="0">
+            <!-- Replace these clearly marked templates with approved client testimonials before publication. -->
+            <article class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+              <blockquote class="testimonial-card">
+                <p class="testimonial-quote">[Insert an approved client quote about the planning experience.]</p>
+                <footer class="testimonial-attribution">
+                  <cite>Client name, shared with permission</cite>
+                  <span>Wedding</span>
+                </footer>
+              </blockquote>
+            </article>
+            <article class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+              <blockquote class="testimonial-card">
+                <p class="testimonial-quote">[Insert an approved client quote about event coordination.]</p>
+                <footer class="testimonial-attribution">
+                  <cite>Client name, shared with permission</cite>
+                  <span>Corporate event</span>
+                </footer>
+              </blockquote>
+            </article>
+            <article class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+              <blockquote class="testimonial-card">
+                <p class="testimonial-quote">[Insert an approved client quote about their celebration.]</p>
+                <footer class="testimonial-attribution">
+                  <cite>Client name, shared with permission</cite>
+                  <span>Private celebration</span>
+                </footer>
+              </blockquote>
+            </article>
+          </div>
+          <nav class="testimonial-pagination" aria-label="Choose a testimonial">
+            <button type="button" aria-label="Go to testimonial 1" aria-current="true" data-testimonial-index="0"></button>
+            <button type="button" aria-label="Go to testimonial 2" data-testimonial-index="1"></button>
+            <button type="button" aria-label="Go to testimonial 3" data-testimonial-index="2"></button>
+          </nav>
+          <p class="testimonial-status" role="status" aria-live="polite" aria-atomic="true"></p>
         </div>
       </section>
 
@@ -250,14 +283,14 @@
       <section class="footer-group" aria-labelledby="footer-connect-heading">
         <h2 class="footer-heading" id="footer-connect-heading">Connect</h2>
         <ul class="footer-contact-list">
-          <li><a href="tel:+27762506512">+27 76 250 6512</a></li>
+          <li><a href="tel:+27762506512">+27 64 419 9221</a></li>
           <li><a href="mailto:samkreaevents@gmail.com">samkreaevents@gmail.com</a></li>
         </ul>
         <ul class="footer-social-list">
           <li>
             <a
               class="social-link"
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/samkrea_events/"
               aria-label="Instagram profile, opens in a new tab"
               target="_blank"
               rel="noopener noreferrer"
@@ -272,20 +305,7 @@
           <li>
             <a
               class="social-link"
-              href="https://www.facebook.com/"
-              aria-label="Facebook page, opens in a new tab"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M13.3 21v-8h2.8l.4-3.1h-3.2v-2c0-.9.3-1.6 1.7-1.6h1.7V3.5c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.2v2.3H7.2V13H10v8h3.3Z"></path>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a
-              class="social-link"
-              href="https://wa.me/27762506512"
+              href="https://wa.me/27644199221"
               aria-label="WhatsApp contact, opens in a new tab"
               target="_blank"
               rel="noopener noreferrer"
