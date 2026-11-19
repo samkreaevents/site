@@ -59,7 +59,7 @@
       </div>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" tabindex="-1">
       <section class="hero section-wrap" id="home">
         <div class="hero-copy">
           <p class="eyebrow">EVENT PLANNING</p>
@@ -319,8 +319,16 @@
       </section>
       <div class="footer-meta">
         <p class="copyright">© <span id="current-year"></span> SAMKREA Events</p>
-        <a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
       </div>
     </footer>
+    <button class="back-to-top-button" type="button" aria-label="Back to top" hidden>
+      <svg class="back-to-top-progress" viewBox="0 0 48 48" aria-hidden="true">
+        <circle class="back-to-top-progress-track" cx="24" cy="24" r="21"></circle>
+        <circle class="back-to-top-progress-indicator" cx="24" cy="24" r="21"></circle>
+      </svg>
+      <svg class="back-to-top-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"></path>
+      </svg>
+    </button>
   </body>
 </html>

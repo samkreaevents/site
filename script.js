@@ -78,7 +78,7 @@ if (header && headerInner && menu && menuButton) {
 }
 
 const testimonialCarousel = document.querySelector(".testimonials");
-const testimonialAutoplayIntervalMs = 10_000;
+const testimonialAutoplayIntervalMs = 6_000;
 
 if (testimonialCarousel) {
   const track = testimonialCarousel.querySelector(".testimonial-track");
@@ -223,4 +223,43 @@ if (testimonialCarousel) {
 
     updateAutoplay();
   }
+}
+
+const backToTopButton = document.querySelector(".back-to-top-button");
+
+if (backToTopButton) {
+  const progressIndicator = backToTopButton.querySelector(".back-to-top-progress-indicator");
+  const progressCircumference = 2 * Math.PI * 21;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let scrollFrame = 0;
+
+  const updateBackToTop = () => {
+    cancelAnimationFrame(scrollFrame);
+    scrollFrame = requestAnimationFrame(() => {
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollProgress = scrollableHeight > 0 ? Math.min(window.scrollY / scrollableHeight, 1) : 0;
+      const shouldHide = window.scrollY < 320;
+
+      if (shouldHide && document.activeElement === backToTopButton) {
+        document.querySelector("#main-content")?.focus({ preventScroll: true });
+      }
+
+      backToTopButton.hidden = shouldHide;
+      progressIndicator?.style.setProperty(
+        "stroke-dashoffset",
+        String(progressCircumference * (1 - scrollProgress))
+      );
+    });
+  };
+
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: reducedMotion.matches ? "auto" : "smooth"
+    });
+  });
+
+  window.addEventListener("scroll", updateBackToTop, { passive: true });
+  window.addEventListener("resize", updateBackToTop, { passive: true });
+  updateBackToTop();
 }
