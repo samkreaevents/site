@@ -147,6 +147,10 @@ button:focus-visible {
   list-style: none;
 }
 
+.site-header:not(.is-wide) .site-menu:not(:popover-open) {
+  display: none;
+}
+
 .site-menu li + li {
   border-top: 1px solid var(--color-gray);
 }
