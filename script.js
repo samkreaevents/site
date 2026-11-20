@@ -38,6 +38,10 @@ if (header && headerInner && menu && menuButton) {
   });
 
   const updateCurrentLocation = () => {
+    if (!sectionLinks.length) {
+      return;
+    }
+
     cancelAnimationFrame(locationFrame);
     locationFrame = requestAnimationFrame(() => {
       const marker = Math.max(header.offsetHeight + 16, window.innerHeight * 0.3);
