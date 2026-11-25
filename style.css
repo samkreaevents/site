@@ -384,7 +384,7 @@ h3 {
 
 .founder-page {
   padding-block: clamp(3.5rem, 7vw, 6.5rem);
-  background: var(--color-ivory);
+  background: var(--color-white);
 }
 
 .founder-profile {
@@ -436,6 +436,10 @@ h3 {
   margin-top: 1.3rem;
   color: #494641;
   font-size: 0.98rem;
+}
+
+.founder-bio-secondary {
+  margin-top: 1rem;
 }
 
 .founder-social-links {
